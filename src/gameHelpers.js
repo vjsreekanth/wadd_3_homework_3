@@ -13,7 +13,7 @@ export const checkCollision = (player, stage, { x: moveX, y: moveY }) => {
       if (player.tetromino[y][x] !== 0) {
         if (
           // 2. Check that our move is inside the game areas height (y)
-          // We shouldn't go through the bottom of the play area
+          // That we're not go through bottom of the play area
           !stage[y + player.pos.y + moveY] ||
           // 3. Check that our move is inside the game areas width (x)
           !stage[y + player.pos.y + moveY][x + player.pos.x + moveX] ||
@@ -26,4 +26,6 @@ export const checkCollision = (player, stage, { x: moveX, y: moveY }) => {
       }
     }
   }
+  // 5. If everything above is false
+  return false;
 };
