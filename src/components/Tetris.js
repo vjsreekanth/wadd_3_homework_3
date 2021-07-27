@@ -8,6 +8,7 @@ import { useInterval } from '../hooks/useInterval';
 import { usePlayer } from '../hooks/usePlayer';
 import { useStage } from '../hooks/useStage';
 import { useGameStatus } from '../hooks/useGameStatus';
+import Extra from './Extra';
 
 // Components
 import Stage from './Stage';
@@ -121,6 +122,7 @@ const Tetris = () => {
           )}
           <StartButton callback={startGame} />
         </aside>
+          <Extra />
       </StyledTetris>
     </StyledTetrisWrapper>
   );
